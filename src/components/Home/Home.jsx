@@ -6,7 +6,7 @@ export const Home = () => {
   const [todos, setTodos] = useState([]);
   const addTodo = (input) => {
     if (input) {
-      let newTodo = {
+      const newTodo = {
         id: Math.random().toString(36).substr(2, 9),
         task: input,
         complete: false,
@@ -29,7 +29,7 @@ export const Home = () => {
 
   return (
     <div>
-      <TodoForm addTodo={(input) => addTodo(input)} />
+      <TodoForm addTodo={addTodo} />
       {todos.map((todo) => (
         <div>
           <Todo
