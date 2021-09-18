@@ -3,18 +3,18 @@ import { useState } from "react";
 
 
 export const TodoForm = ({ addTodo }) => {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState('');
 
   const handlerSubmit = (e) => {
     e.preventDefault();
     addTodo(input);
-    setInput("");
+    setInput('');
   }
   return (
     <form onSubmit={handlerSubmit}>
       <input
         type="text"
-        placeholder="write todo"
+        placeholder="Write To-Do"
         value={input}
         onChange={(e) => {
           setInput(e.target.value);
