@@ -1,0 +1,9 @@
+.completeButton {
+    color: green;
+    text-decoration: line-through;
+}
+
+.todoInput {
+    display: flex;
+    flex-direction: row;
+}
