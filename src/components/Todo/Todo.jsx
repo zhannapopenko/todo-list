@@ -12,13 +12,13 @@ export const Todo = ({ todo, toggleTodo, removeTodo }) => {
         onClick={() => toggleTodo(todo.id)} >
         
         {changeItem ? 
-        (<input value={updateInputValue} onChange={(e) => setUpdateInputValue(e.target.value)}/>):
+        (<input value={updateInputValue} onChange={(e) => setUpdateInputValue(e.target.value)}/>) :
         (updateInputValue)
         }
       </div>
 
         {changeItem ?
-        (<button onClick={() => setChangeItem(false)}>Save</button>):
+        (<button onClick={() => setChangeItem(false)}>Save</button>) :
         (<button onClick={() => setChangeItem(true)}>Change</button>)
         }
 
