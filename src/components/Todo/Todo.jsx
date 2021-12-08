@@ -12,7 +12,6 @@ export const Todo = ({ todo, toggleTodo, removeTodo }) => {
   const [changeTodo, setChangeTodo] = useState(false)
   const [updateInputValue, setUpdateInputValue] = useState(todo.title)
   const [complete, setComplete] = useState(false)
-  const [disable, setDisable] = useState(false)
   const styles = todoStyles()
   return (
     <Box key={todo.id} className={styles.mainBox}>
@@ -23,7 +22,6 @@ export const Todo = ({ todo, toggleTodo, removeTodo }) => {
             onClick={() => {
               setComplete(false);
             }}
-            disabled={disable}
           >
             <PublishedWithChangesIcon sx={{ color: '#515251' }} />
           </Box>
@@ -31,7 +29,6 @@ export const Todo = ({ todo, toggleTodo, removeTodo }) => {
           <Box //completed to-do
             className={styles.button}
             onClick={() => setComplete(true)}
-            disabled={disable}
           >
             <CheckCircleIcon sx={{ color: '#178f07' }} />
           </Box>
@@ -57,7 +54,7 @@ export const Todo = ({ todo, toggleTodo, removeTodo }) => {
             className={styles.button}
             onClick={() => {
               setChangeTodo(false)
-              setDisable(false)
+              
             }}
           >
             <TaskIcon sx={{ color: '#1f71db' }} />
@@ -67,13 +64,11 @@ export const Todo = ({ todo, toggleTodo, removeTodo }) => {
             className={styles.button}
             onClick={() => {
               setChangeTodo(true);
-              setDisable(true);
             }}
           >
             <SettingsIcon sx={{ color: '#515251' }} />
           </Box>
         )}
-
         <Box //delete to-do
           className={styles.button}
           onClick={() => removeTodo(todo.id)}
