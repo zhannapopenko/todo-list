@@ -25,7 +25,6 @@ export const todoStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "start",
     margin: "0.3rem",
-    display: "flex",
     flex: 1,
   },
   textFieldContainer: {
