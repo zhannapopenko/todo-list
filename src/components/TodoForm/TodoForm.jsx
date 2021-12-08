@@ -33,7 +33,7 @@ export const TodoForm = ({ addTodo }) => {
         <TextField
           className={styles.textField}
           type="search"
-          label="Write To-Do and push Enter"
+          label="Write To-Do and click Enter"
           {...inputValue.bind}
         />
       </Box>
